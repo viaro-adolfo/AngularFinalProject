@@ -1,0 +1,21 @@
+<h1>Suggestions</h1>
+
+<div ng-repeat="post in SuggCtrl.posts">
+    <h2>{{ post.title }}</h2>
+    <p>
+        <span ng-click="SuggCtrl.suggestionUpVotes(post)">+</span>
+        <span>Upvotes: {{ post.upvotes }} | <a href="#/suggestion/{{ post.id }}">Comments</a></span>
+    </p>
+</div>
+
+<form ng-submit="SuggCtrl.addSuggestion()">
+    <h3>Add a Sugggestion</h3>
+    <div class="form-group">
+        <input
+            type="text"
+            class="form-control"
+            ng-model="SuggCtrl.new_suggestion"
+            placeholder="New Suggestion"
+        ></input>
+    </div>
+</form>
