@@ -8,5 +8,12 @@ angular.module('SuggestionBox')
                 controller: 'SuggestionController',
                 templateUrl: 'views/suggestion.html',
                 controllerAs: 'SuggCtrl'
-            });
+            })
+            .when('/suggestion/:id', {
+                controller: 'CommentController',
+                templateUrl: 'views/comment.html',
+                controllerAs: 'CommCtrl'
+            })
+            .otherwise({redirectTo: '/'})
+        ;
     });

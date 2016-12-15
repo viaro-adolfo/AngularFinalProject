@@ -2,10 +2,9 @@
 
 angular.module('SuggestionBox')
 .controller('SuggestionController', [
-    '$routeParams',
     'SuggestionService',
 
-    function($routeParams, SuggestionService){
+    function(SuggestionService){
         var vm = this;
 
         vm.new_suggestion = '';

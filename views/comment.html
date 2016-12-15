@@ -1,0 +1,21 @@
+<h1>{{ CommCtrl.suggestion.title }} - Comments</h1>
+
+<div ng-repeat="comment in CommCtrl.suggestion.comments">
+    <p>
+        <span ng-click="CommCtrl.commentUpVotes(comment)">+</span>
+        <span>Upvotes: {{ comment.upvotes }} | {{ comment.text }}</span>
+    </p>
+</div>
+
+<form ng-submit="CommCtrl.addComment()">
+    <h3>Add a Comment</h3>
+    <div class="form-group">
+        <input
+            type="text"
+            class="form-control"
+            ng-model="CommCtrl.comment_text"
+            placeholder="New Comment"
+        ></input>
+        <!-- <button type="submit" class="btn btn-primary">Comment</button> -->
+    </div>
+</form>
